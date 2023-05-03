@@ -1,0 +1,21 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <h3>País</h3>
+        </div>
+        <div class="col">
+            <search-box (emitirvalor)="buscar($event)" [pHolder]="'Buscar por pais'"></search-box>
+        </div>
+    </div>
+    
+    <div class="row">
+        <countrie-table></countrie-table>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let country of countries">
+                {{country.name.common}} - {{country.population}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
